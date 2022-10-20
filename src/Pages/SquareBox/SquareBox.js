@@ -1,10 +1,13 @@
 import React from 'react';
 import './SquareBox.css';
 
-const SquareBox = () => {
+const SquareBox = (props) => {
+
+
+    
     return (
-        <div className='square-box'>
-            <h2>X</h2>
+        <div onClick={props.onClick} className='square-box'>
+            <h2>{props.value}</h2>
         </div>
     );
 };

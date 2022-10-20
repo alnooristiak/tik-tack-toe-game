@@ -1,0 +1,6 @@
+.square-box{
+    border: 1px solid gold;
+    height: 100px;
+    width: 100%;
+    display: flex;
+}

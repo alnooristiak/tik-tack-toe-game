@@ -9,4 +9,22 @@
     align-items: center;
 }
 
-/*  */
+/* winner-text */
+.winner-text{
+    color: white;
+    text-decoration: #2c2c54;
+}
+.play-again{
+    margin-top: 10px;
+    transition: .5s;
+    outline: none;
+    background-color: #218c74;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px 35px;
+}
+.play-again:hover{
+    background-color: #006266;
+    color: white;
+    /* font-size: 19; */
+}

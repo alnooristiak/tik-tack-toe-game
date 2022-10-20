@@ -8,6 +8,11 @@ const Board = () => {
 
     // console.log(state);
     const handleClicked = (index) => {
+        // error hendel to duble click to value are changed 
+        if (state[index] !== null) {
+            return;
+        }
+
         // console.log('value of clicking', index);
         let copyState = [...state];
         copyState[index] = xtrun ? "X" : "O";
@@ -41,24 +46,42 @@ const Board = () => {
 
     const winnerIs = checkWinner();
 
+    // play again btn and handle to reset game to all of box are null/mt 
+    const handleReset = () => {
+        staeState(Array(9).fill(null));
+    }
+
     return (
-        <div className='board-container'>
-            {winnerIs ? <>OUR WINNER IS: {winnerIs}</> :
+        <div className='container board-container'>
+            {winnerIs ?
                 <>
-                    <div className="board-row">
-                        <SquareBox onClick={() => handleClicked(0)} value={state[0]} />
-                        <SquareBox onClick={() => handleClicked(1)} value={state[1]} />
-                        <SquareBox onClick={() => handleClicked(2)} value={state[2]} />
+                    <h2>OUR WINNER IS: <span className='winner-text'>
+                    {winnerIs}</span></h2>
+                    <div>
+                        <button className='play-again btn' onClick={handleReset}>PlaY AgaiN</button>
                     </div>
-                    <div className="board-row">
-                        <SquareBox onClick={() => handleClicked(3)} value={state[3]} />
-                        <SquareBox onClick={() => handleClicked(4)} value={state[4]} />
-                        <SquareBox onClick={() => handleClicked(5)} value={state[5]} />
+                </> :
+                <>
+                    <div className='py-3'>
+                        <h4>Player <strong className='winner-text'>{xtrun ? "X" : "O"}</strong> Trun.</h4>
+                        <h5> Please Click Containue to <strong>GAME</strong> </h5>
                     </div>
-                    <div className="board-row">
-                        <SquareBox onClick={() => handleClicked(6)} value={state[6]} />
-                        <SquareBox onClick={() => handleClicked(7)} value={state[7]} />
-                        <SquareBox onClick={() => handleClicked(8)} value={state[8]} />
+                    <div className="row">
+                        <div className="board-row">
+                            <SquareBox onClick={() => handleClicked(0)} value={state[0]} />
+                            <SquareBox onClick={() => handleClicked(1)} value={state[1]} />
+                            <SquareBox onClick={() => handleClicked(2)} value={state[2]} />
+                        </div>
+                        <div className="board-row">
+                            <SquareBox onClick={() => handleClicked(3)} value={state[3]} />
+                            <SquareBox onClick={() => handleClicked(4)} value={state[4]} />
+                            <SquareBox onClick={() => handleClicked(5)} value={state[5]} />
+                        </div>
+                        <div className="board-row">
+                            <SquareBox onClick={() => handleClicked(6)} value={state[6]} />
+                            <SquareBox onClick={() => handleClicked(7)} value={state[7]} />
+                            <SquareBox onClick={() => handleClicked(8)} value={state[8]} />
+                        </div>
                     </div>
                 </>
             }

@@ -1,8 +1,16 @@
-.square-box{
-    border: 1px solid gold;
+.square-box {
+    border: 1px solid #218c74;
     height: 100px;
-    width: 100%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    margin: 10px;
+    background-color: #0fb9b1;
+    /* Box shadow  */
+    border-radius: 74px;
+    background: #0fb9b1;
+    box-shadow: 5px 5px 6px #0c9891,
+        -5px -5px 6px #12dad1;
 }

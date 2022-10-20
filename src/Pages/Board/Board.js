@@ -4,18 +4,18 @@ import './Board.css'
 
 const Board = () => {
     return (
-        <div className='container board-container'>
-            <div className="board-row col">
+        <div className='board-container'>
+            <div className="board-row">
                 <SquareBox />
                 <SquareBox />
                 <SquareBox />
             </div>
-            <div className="board-row col">
+            <div className="board-row">
                 <SquareBox />
                 <SquareBox />
                 <SquareBox />
             </div>
-            <div className="board-row col">
+            <div className="board-row">
                 <SquareBox />
                 <SquareBox />
                 <SquareBox />

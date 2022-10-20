@@ -1,4 +1,8 @@
 /* Board Row CSS  */
+.board-container{
+    margin-top: 20px;
+    width: 90%;
+}
 .board-row{
     display: flex;
     justify-content: space-evenly;

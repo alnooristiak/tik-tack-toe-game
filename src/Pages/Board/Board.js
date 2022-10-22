@@ -62,9 +62,9 @@ const Board = () => {
                     </div>
                 </> :
                 <>
-                    <div className='py-3'>
-                        <h4>Player <strong className='winner-text'>{xtrun ? "X" : "O"}</strong> Trun.</h4>
-                        <h5> Please Click Containue to <strong>GAME</strong> </h5>
+                    <div className='py-3 d-flex'>
+                        <h4>Player <strong className='winner-text'>{xtrun ? "X" : "O"}</strong> Trun.</h4><span> --- </span>
+                        <h4> Please Click Containue to <strong>GAME</strong> </h4>
                     </div>
                     <div className="row">
                         <div className="board-row">
